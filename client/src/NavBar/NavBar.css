@@ -1,0 +1,17 @@
+.navbar-inner {
+
+}
+
+.navbar-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  height: 3.5rem;
+  background-color: #001eff48;
+}
+
+.logo {
+  font-size: 1.4rem;
+  letter-spacing: 2.3px;
+}
