@@ -5,6 +5,10 @@ class CandleChart extends Component {
   constructor(props) {
     super(props);
  
+    const symbolData = this.props.symbolData;
+
+   // console.log('symbolData', symbolData);
+
     this.state = {
       options: {
         alignLabels: true,
