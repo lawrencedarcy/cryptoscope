@@ -1,13 +1,15 @@
 import React from 'react';
 import NavBar from './NavBar/NavBar';
 import './App.css';
+import CandleChart from './CandleChart/CandleChart';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      Yeh is cryptoscope
-    </div>
+    
+     <div className='chart-wrapper'> <CandleChart />
+    </div></div>
   );
 }
 
