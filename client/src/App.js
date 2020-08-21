@@ -9,7 +9,6 @@ function App() {
   const [symbolData, setSymbolData] = useState();
 
   useEffect(() => {
-
     axios
     .get('https://api.binance.com/api/v3/klines', {
       params: {
@@ -19,8 +18,15 @@ function App() {
       }
     })
     .then(function(response) {
-      console.log(response.data);
-      setSymbolData(response.data);
+      const formattedData = response.data.map(x => ({
+        time: x[0], 
+        open: x[1], 
+        high: x[2], 
+        low: x[3], 
+        close: x[4] }),
+     )
+      setSymbolData(formattedData);
+      console.log('formattedData', formattedData);
     })
     .catch(function(error) {
       console.log(error);
@@ -35,7 +41,10 @@ function App() {
       <ButtonBar />
       <div className='chart-wrapper'>
         {' '}
-        <CandleChart symbolData={symbolData} />
+        {symbolData && 
+                  <CandleChart symbolData={symbolData && symbolData}  name={'hi'}/>
+
+        }
       </div>
     </div>
   );
