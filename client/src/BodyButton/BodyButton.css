@@ -1,0 +1,19 @@
+.button-outer {
+  width: 100px;
+  background-color: #8400ff31;
+  padding: 1rem;
+  border-bottom: 3px solid transparent;
+  color: rgba(255, 255, 255, 0.822);
+  margin: .1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #8400ff4b;
+  border-bottom: 3px solid #8400ffa6;
+  color: white;
+}
