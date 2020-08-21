@@ -11,6 +11,11 @@
   justify-content: center;
   cursor: pointer;
 }
+.button-outer:hover {
+  background-color: #8400ff4b;
+
+
+}
 
 .selected {
   background-color: #8400ff4b;
