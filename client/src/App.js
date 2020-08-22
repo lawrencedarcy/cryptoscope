@@ -4,7 +4,7 @@ import NavBar from './NavBar/NavBar';
 import './App.css';
 import CandleChart from './CandleChart/CandleChart';
 import ButtonBar from './ButtonBar/ButtonBar';
-
+import Intervals from './Intervals/Intervals';
 
 
 function App() {
@@ -81,6 +81,10 @@ const getDataFromApi = (symbol) => {
 
         }
       </div>
+      <div className='chart-wrapper'>
+      <Intervals />
+      </div>
+    
     </div>
   );
 }

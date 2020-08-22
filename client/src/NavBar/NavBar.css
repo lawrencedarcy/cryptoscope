@@ -12,11 +12,11 @@ margin: 2rem;
 }
 
 .navbar-btn{
-  border: 1px solid white;
+  border: .5px solid white;
   background-color: transparent;
-  padding: .5rem 0;
+  padding: .4rem 0;
   color: rgba(255, 255, 255, 0.815);
-  margin-right: .5rem;
+  margin-right: .4rem;
   cursor: pointer;
   outline: none;
   text-transform: uppercase;
@@ -44,7 +44,7 @@ margin: 2rem;
 
 
 .cyber-button:hover {
-  animation: background-change .9s .6s forwards;
+  animation: background-change .6s .6s forwards;
  
   
 }
