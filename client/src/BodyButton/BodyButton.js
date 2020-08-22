@@ -2,12 +2,19 @@ import React from 'react';
 import './BodyButton.css';
 
 
-function BodyButton({label, sublabel}) {
+function BodyButton({label, sublabel, symbolChangeHandler}) {
+
+  const clickHandler = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    symbolChangeHandler(e.target.value);
+  }
+
   return (
-    <div className='button-outer '>
-     <div>{label}</div>
-     <div className='button-sublabel'>{sublabel}</div>
-    </div>
+    <button className='button-outer' onClick={clickHandler} value={label} >
+     {label}
+     <span className='button-sublabel'>{sublabel}</span>
+    </button>
   );
 }
 

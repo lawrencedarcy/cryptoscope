@@ -10,6 +10,9 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: 'Orbitron', sans-serif;
 }
 .button-outer:hover {
   background-color: #8400ff4b;
@@ -25,4 +28,7 @@
 
 .button-sublabel {
   font-size: .6rem;
+  font-family: 'Raleway', sans-serif;
+  pointer-events: none;
+
 }
