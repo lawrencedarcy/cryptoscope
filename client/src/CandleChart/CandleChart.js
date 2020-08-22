@@ -7,6 +7,7 @@ class CandleChart extends Component {
   constructor(props) {
     super(props);
  
+    console.log('FROM', this.props.symbolData[0].close)
 
     this.state = {
       options: {
@@ -20,7 +21,7 @@ class CandleChart extends Component {
           borderVisible: false,
           borderColor: "#fff000",
           visible: true,
-          timeVisible: true,
+          timeVisible: false,
           secondsVisible: false,
           localization: {
             locale: 'en-US',
@@ -38,7 +39,7 @@ class CandleChart extends Component {
  
   render() {
     return (
-      <Chart options={this.state.options} candlestickSeries={this.state.candlestickSeries} autoWidth height={320} darkTheme />
+      <Chart options={this.state.options} candlestickSeries={this.state.candlestickSeries}  height={320} darkTheme  autoWidth  from={ this.props.symbolData[0].time} to={ this.props.symbolData[999].time}/>
     )
   }
 }

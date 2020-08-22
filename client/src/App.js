@@ -5,9 +5,31 @@ import './App.css';
 import CandleChart from './CandleChart/CandleChart';
 import ButtonBar from './ButtonBar/ButtonBar';
 
+
 function App() {
   const [symbolData, setSymbolData] = useState();
 
+
+  function padZero(number) {
+    if (number < 10) {
+        number = "0" + number;
+    }
+
+    return number;
+}
+
+function unixtime2YYMMDD(unixtime) {
+    var milliseconds = unixtime,
+        dateObject = new Date(milliseconds),
+        temp = [];
+
+    temp.push(20 + dateObject.getFullYear().toString().slice(2));
+    temp.push(padZero(dateObject.getMonth() + 1));
+    temp.push(padZero(dateObject.getDate()));
+
+    return temp.join("-");
+}
+ 
   useEffect(() => {
     axios
     .get('https://api.binance.com/api/v3/klines', {
@@ -18,8 +40,9 @@ function App() {
       }
     })
     .then(function(response) {
+      console.log('res data', response.data);
       const formattedData = response.data.map(x => ({
-        time: x[0], 
+       time: unixtime2YYMMDD(x[0]), 
         open: x[1], 
         high: x[2], 
         low: x[3], 
