@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './BodyButton.css';
 
 
-function BodyButton({label, sublabel, symbolChangeHandler}) {
+function BodyButton({label, sublabel, symbolChangeHandler, currentSymbol}) {
+
+  const selected = (currentSymbol === label);
 
   const clickHandler = (e) => {
     e.preventDefault();
@@ -11,8 +13,8 @@ function BodyButton({label, sublabel, symbolChangeHandler}) {
   }
 
   return (
-    <button className='button-outer' onClick={clickHandler} value={label} >
-     {label}
+    <button className={selected ? 'button-outer selected' : 'button-outer'}  onClick={clickHandler} value={label} >
+      <span className='button-label'>{label}</span>
      <span className='button-sublabel'>{sublabel}</span>
     </button>
   );

@@ -24,22 +24,22 @@ function App() {
       timeVisible: true,
       secondsVisible: false,
     }});
-  const candlestickSeries= [{
-    data: symbolData
-  }];
 
+    const [candlestickSeries, setCandleStickSeries] = useState([{
+      data: []
+    }]);
 
 
   const symbolChangeHandler = (symbol) => {
-    setCurrentSymbol(symbol);
-    getDataFromApi();
+    setCurrentSymbol(symbol); //is this the error
+    getDataFromApi(symbol);
   }
 
-const getDataFromApi = () => {
+const getDataFromApi = (symbol) => {
   axios
   .get('https://api.binance.com/api/v3/klines', {
     params: {
-      symbol: currentSymbol,
+      symbol: symbol || currentSymbol,
       interval: '1h',
       limit: 1000
     }
@@ -53,6 +53,9 @@ const getDataFromApi = () => {
       close: x[4] }),
    )
     setSymbolData(formattedData);
+    setCandleStickSeries([{
+      data: formattedData
+    }]);
     console.log('formattedData', formattedData);
   })
   .catch(function(error) {
@@ -70,11 +73,11 @@ const getDataFromApi = () => {
   return (
     <div className='App'>
       <NavBar />
-      <ButtonBar symbolChangeHandler={symbolChangeHandler}/>
+      <ButtonBar symbolChangeHandler={symbolChangeHandler} currentSymbol={currentSymbol}/>
       <div className='chart-wrapper'>
         {' '}
         {symbolData && 
-                  <CandleChart symbolData={symbolData}  options={options} candlestickSeries={candlestickSeries} />
+                  <CandleChart symbolData={symbolData} options={options} candlestickSeries={candlestickSeries} />
 
         }
       </div>
