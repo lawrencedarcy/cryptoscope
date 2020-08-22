@@ -1,5 +1,29 @@
 .navbar-inner {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 2rem;
 
+}
+
+.navbar-btns{
+ 
+  
+}
+
+.navbar-btn{
+  border: 1px solid white;
+  background-color: transparent;
+  padding: .5rem 0;
+  color: rgba(255, 255, 255, 0.815);
+  margin-right: .5rem;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: .7rem;
+  letter-spacing: .1rem;
+  min-width: 85px;
 }
 
 .navbar-outer {
@@ -15,3 +39,25 @@
   font-size: 1.4rem;
   letter-spacing: 2.3px;
 }
+
+
+
+
+.cyber-button:hover {
+  animation: background-change .9s .6s forwards;
+ 
+  
+}
+
+
+  @keyframes background-change {
+
+      0% {
+          background: rgb(142, 153, 153);
+      }
+      100% {
+          background: white;
+          color: #092b29;
+          font-weight: bold;
+      }
+  }

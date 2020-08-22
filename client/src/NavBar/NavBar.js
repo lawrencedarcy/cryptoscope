@@ -6,7 +6,12 @@ function NavBar(props) {
     <div className='navbar-outer'>
       <div className='navbar-inner'>
         <div className='logo'>CRYPTOSCOPE</div>
-        
+        <div className='navbar-btns'>
+        <button className='navbar-btn cyber-button'>Login</button>
+        <button className='navbar-btn cyber-button'>Signup</button>
+
+        </div>
+
       </div>
     
     </div>
