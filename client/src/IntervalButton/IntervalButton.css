@@ -34,10 +34,14 @@
   pointer-events: none;
 }
 
-.intervalbutton-label{
-}
 
 .intervalbutton-sublabel {
   font-size: .7em;
   font-family: 'Raleway', sans-serif;
+}
+
+@media only screen and (max-width: 520px) {
+  .intervalbtn-outer {
+  min-width: 3rem;
+  }
 }
