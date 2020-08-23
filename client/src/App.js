@@ -9,7 +9,8 @@ import Intervals from './Intervals/Intervals';
 
 function App() {
   const [symbolData, setSymbolData] = useState();
-  const [currentSymbol, setCurrentSymbol] = useState('BTCGBP');
+  const [currentSymbol, setCurrentSymbol] = useState('BTCUSDT');
+  const [allSymbols, setAllSymbols] = useState([]);
   const [options, setOptions] = useState({
     alignLabels: true,
     timeScale: {
@@ -63,9 +64,21 @@ const getDataFromApi = (symbol) => {
   });
 }
 
+const getAllSymbolData = () => {
+  axios
+  .get('https://api.binance.com/api/v3/exchangeInfo')
+  .then(function(response) {
+    console.log(response.data.symbols);
+    setAllSymbols(response.data.symbols);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
+}
 
   useEffect(() => {
     getDataFromApi();
+    getAllSymbolData();
   }, []);
 
 
@@ -73,7 +86,7 @@ const getDataFromApi = (symbol) => {
   return (
     <div className='App'>
       <NavBar />
-      <ButtonBar symbolChangeHandler={symbolChangeHandler} currentSymbol={currentSymbol}/>
+      <ButtonBar symbolChangeHandler={symbolChangeHandler} currentSymbol={currentSymbol} allSymbols={allSymbols}/>
       <div className='chart-wrapper'>
         {' '}
         {symbolData && 

@@ -6,3 +6,11 @@
   overflow: auto;
   max-width: 800px;
 }
+
+
+.buttonbar-outer::-webkit-scrollbar {
+   
+  height: 1px;
+}
+
+
