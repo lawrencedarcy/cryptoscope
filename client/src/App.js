@@ -104,7 +104,7 @@ const getAllSymbolData = () => {
       </div>
       <div className='chart-wrapper'>
       <Intervals intervalChangeHandler={intervalChangeHandler} interval={interval}/>
-      <AIconsole />
+      <AIconsole className='console'/>
       </div>
     
     </div>

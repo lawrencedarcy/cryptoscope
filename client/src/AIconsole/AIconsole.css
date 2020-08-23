@@ -2,17 +2,17 @@
 
   width: 100%;
   max-width: 800px;
-  height: 400px;
-  background-image: linear-gradient(to top, #00fff21e , black);
-
+  height: 160px;
+  background-color: #00fff204;
+  /* background-image: linear-gradient(to top, #00fff20a , black);
+ */
 }
 
 .console-switch {
   border: .5px solid white;
   background-color: black;
-  padding: .6rem .6rem;
+  padding: .5rem .4rem;
   color: rgba(255, 255, 255, 0.815);
-  margin-right: .4rem;
   cursor: pointer;
   outline: none;
   text-transform: uppercase;
@@ -20,8 +20,14 @@
   font-size: .8rem;
   letter-spacing: .1rem;
   min-width: 85px;
-  margin-top: 1rem;
-  width: 100%;
+  margin-top: .7rem;
+  margin-right: .7rem;
+  width: 150px;
+  float: right;
+}
+
+.choose-model {
+  padding: 4rem;
 }
 
 .cyber-button:hover {
