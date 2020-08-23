@@ -2,14 +2,13 @@ import React, {useState} from 'react';
 import './IntervalButton.css';
 
 
-function IntervalButton({label, sublabel, symbolChangeHandler, currentSymbol}) {
+function IntervalButton({label, sublabel, symbolChangeHandler, currentSymbol, interval, intervalChangeHandler}) {
 
-  const selected = (currentSymbol === label);
+  const selected = (interval === label);
 
   const clickHandler = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
-    symbolChangeHandler(e.target.value);
+    intervalChangeHandler(e.target.value);
   }
 
   return (

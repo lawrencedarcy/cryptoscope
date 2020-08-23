@@ -11,6 +11,7 @@ function App() {
   const [symbolData, setSymbolData] = useState();
   const [currentSymbol, setCurrentSymbol] = useState('BTCUSDT');
   const [allSymbols, setAllSymbols] = useState([]);
+  const [interval, setInterval] = useState('1h');
   const [options, setOptions] = useState({
     alignLabels: true,
     timeScale: {
@@ -32,8 +33,14 @@ function App() {
 
 
   const symbolChangeHandler = (symbol) => {
-    setCurrentSymbol(symbol); //is this the error
+    setCurrentSymbol(symbol); 
     getDataFromApi(symbol);
+  }
+
+  const intervalChangeHandler = (interval) => {
+    console.log(interval);
+    setInterval(interval);
+    getDataFromApi(currentSymbol);
   }
 
 const getDataFromApi = (symbol) => {
@@ -41,7 +48,7 @@ const getDataFromApi = (symbol) => {
   .get('https://api.binance.com/api/v3/klines', {
     params: {
       symbol: symbol || currentSymbol,
-      interval: '1h',
+      interval: interval,
       limit: 1000
     }
   })
@@ -95,7 +102,7 @@ const getAllSymbolData = () => {
         }
       </div>
       <div className='chart-wrapper'>
-      <Intervals />
+      <Intervals intervalChangeHandler={intervalChangeHandler} interval={interval}/>
       </div>
     
     </div>
