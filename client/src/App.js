@@ -34,16 +34,16 @@ function App() {
 
   const symbolChangeHandler = (symbol) => {
     setCurrentSymbol(symbol); 
-    getDataFromApi(symbol);
+    getDataFromApi(symbol, interval);
   }
 
   const intervalChangeHandler = (interval) => {
     console.log(interval);
     setInterval(interval);
-    getDataFromApi(currentSymbol);
+    getDataFromApi(currentSymbol, interval);
   }
 
-const getDataFromApi = (symbol) => {
+const getDataFromApi = (symbol, interval) => {
   axios
   .get('https://api.binance.com/api/v3/klines', {
     params: {
@@ -84,7 +84,7 @@ const getAllSymbolData = () => {
 }
 
   useEffect(() => {
-    getDataFromApi();
+    getDataFromApi('BTCUSDT', '1h');
     getAllSymbolData();
   }, []);
 
