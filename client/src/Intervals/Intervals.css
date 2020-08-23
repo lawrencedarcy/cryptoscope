@@ -5,6 +5,7 @@
   overflow: auto;
   max-width: 800px;
   margin-top: .1rem;
+  margin-bottom: 0rem;
 }
 
 .intervals::-webkit-scrollbar {

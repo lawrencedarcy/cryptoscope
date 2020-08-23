@@ -1,0 +1,44 @@
+.console-outer {
+
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  background-image: linear-gradient(to top, #00fff21e , black);
+
+}
+
+.console-switch {
+  border: .5px solid white;
+  background-color: black;
+  padding: .6rem .6rem;
+  color: rgba(255, 255, 255, 0.815);
+  margin-right: .4rem;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  min-width: 85px;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.cyber-button:hover {
+  animation: background-change .3s .3s forwards;
+ 
+  
+}
+
+
+  @keyframes background-change {
+
+      0% {
+          background: rgb(142, 153, 153);
+      }
+      100% {
+          background: rgba(255, 255, 255, 0.822);
+          color: black;
+          font-weight: bold;
+      }
+  }

@@ -5,6 +5,7 @@ import './App.css';
 import CandleChart from './CandleChart/CandleChart';
 import ButtonBar from './ButtonBar/ButtonBar';
 import Intervals from './Intervals/Intervals';
+import AIconsole from './AIconsole/AIconsole';
 
 
 function App() {
@@ -103,6 +104,7 @@ const getAllSymbolData = () => {
       </div>
       <div className='chart-wrapper'>
       <Intervals intervalChangeHandler={intervalChangeHandler} interval={interval}/>
+      <AIconsole />
       </div>
     
     </div>
