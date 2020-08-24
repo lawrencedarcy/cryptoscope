@@ -21,17 +21,22 @@ const sliderDone = () => {};
 
 
 {consoleSwitch &&
-  <div className='choose-model'>Choose model: 
+  <div className='choose-model'>
+    <div className='select-label'>
+    CHOOSE MODEL: 
 
-  <select name="cars" id="cars">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
+  <select name="cars" id="cars" className='select'>
+ 
+  <option value="channel up">Channel up</option>
+  <option value="channel down">Channel down</option>
+  <option value="ascending triangle">Ascending triangle</option>
+  <option value="Cup with handle">Cup with handle</option>
+  <option value="falling wedge">Falling wedge</option>
+
 </select>
 
-
-AI LEVEL:
+<div className='slider-label'>
+<div className='slider-label-text'>MODEL CONFIDENCE LEVEL:</div>
 
 <Slider
   value={percent}
@@ -40,8 +45,12 @@ AI LEVEL:
   thumbColor='#8400ffc2'
   shadowColor='#8400ff65'
   sliderPathColor='#8400ff1a'
+  className='slider'
 />
+</div>
   </div>
+  </div>
+
   
   
   }

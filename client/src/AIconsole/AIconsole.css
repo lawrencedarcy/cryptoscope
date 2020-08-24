@@ -1,27 +1,25 @@
 .console-outer {
-
   width: 100%;
   max-width: 800px;
   height: 160px;
-  background-color: #00fff204;
-  /* background-image: linear-gradient(to top, #00fff20a , black);
- */
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
 }
 
 .console-switch {
-  border: .5px solid white;
+  border: 0.5px solid white;
   background-color: black;
-  padding: .5rem .4rem;
+  padding: 0.5rem 0.4rem;
   color: rgba(255, 255, 255, 0.815);
   cursor: pointer;
   outline: none;
   text-transform: uppercase;
   font-family: 'Raleway', sans-serif;
-  font-size: .8rem;
-  letter-spacing: .1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
   min-width: 85px;
-  margin-top: .7rem;
-  margin-right: .7rem;
+  margin-top: 0.7rem;
+  margin-right: 0.7rem;
   width: 150px;
   float: right;
 }
@@ -31,20 +29,105 @@
 }
 
 .cyber-button:hover {
-  animation: background-change .3s .3s forwards;
- 
-  
+  animation: background-change 0.3s 0.3s forwards;
 }
 
-
-  @keyframes background-change {
-
-      0% {
-          background: rgb(142, 153, 153);
-      }
-      100% {
-          background: rgba(255, 255, 255, 0.822);
-          color: black;
-          font-weight: bold;
-      }
+@keyframes background-change {
+  0% {
+    background: rgb(142, 153, 153);
   }
+  100% {
+    background: rgba(255, 255, 255, 0.822);
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.select {
+  width: 11rem;
+  margin: 0rem 0rem;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border: 0px dotted white;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Style the arrow inside the select element: */
+.select option {
+  outline: 0;
+  background-color: black;
+  color: white;
+}
+
+.select-label {
+  background-color: #8400ff10;
+  padding: 1rem;
+}
+.slider-label {
+  margin: 1rem;
+}
+
+.slider-label-text {
+  margin: 1rem;
+}
+
+.slider {
+  width: 50%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .choose-model {
+    padding: 4rem 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
