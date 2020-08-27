@@ -39,7 +39,6 @@ function App() {
   }
 
   const intervalChangeHandler = (interval) => {
-    console.log(interval);
     setInterval(interval);
     getDataFromApi(currentSymbol, interval);
   }
@@ -76,7 +75,6 @@ const getAllSymbolData = () => {
   axios
   .get('https://api.binance.com/api/v3/exchangeInfo')
   .then(function(response) {
-    console.log(response.data.symbols);
     setAllSymbols(response.data.symbols);
   })
   .catch(function(error) {
