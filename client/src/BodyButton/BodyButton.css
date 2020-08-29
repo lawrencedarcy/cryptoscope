@@ -1,6 +1,6 @@
 .button-outer {
   
-  background-color: #8400ff31;
+  background-color: rgb(34, 34, 34);
   padding: 1rem;
   border-bottom: 3px solid transparent;
   color: rgba(255, 255, 255, 0.822);
@@ -13,17 +13,16 @@
   cursor: pointer;
   outline: none;
   border: none;
-  font-family: 'Orbitron', sans-serif;
 }
 .button-outer:hover {
-  background-color: #8400ff4b;
+  background-color: rgb(56, 56, 56);
 
 
 }
 
 .selected, .selected:hover {
-  background-color: #8400ff65;
-  border-bottom: 3px solid #8400ffa6;
+  background-color: rgb(78, 78, 78);
+  border-bottom: 3px solid rgb(161, 161, 161);
   color: white;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .button-label{
-letter-spacing: .1rem;
+letter-spacing: .07rem;
 }
 
 .button-sublabel {

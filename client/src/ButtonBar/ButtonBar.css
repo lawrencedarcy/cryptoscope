@@ -1,10 +1,10 @@
 .buttonbar-outer {
   width: 80%;
-  height: 4rem;
+  height: 2srem;
   display: flex;
-  margin: 3rem auto 0 ;
+  margin: 0rem auto 0 ;
   overflow: auto;
-  max-width: 800px;
+  max-width: 2000px;
 }
 
 
@@ -13,3 +13,20 @@
   height: 1px;
 }
 
+.popular-symbols {
+  width: 80%;
+  display: flex;
+  margin: 3rem auto .1rem ;
+  padding: .6rem .8rem;
+  box-sizing: border-box;
+  background-color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  color: rgba(255, 255, 255, 0.815);
+  max-width: 2000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}

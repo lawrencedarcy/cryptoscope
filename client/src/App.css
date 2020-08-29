@@ -1,12 +1,13 @@
 .App {
   text-align: center;
   height: 130%;
+
 }
 
 .chart-wrapper {
 width: 80%;
   margin: 0em auto;
   border: 0px solid white;
-  max-width: 800px;
+  max-width: 2000px;
 }
 
