@@ -31,13 +31,13 @@ margin: 2.6rem;
   flex-direction: column;
   justify-content: center;
   
-  height: 3.5rem;
+  height: 3rem;
   background-color: #1d2928;
 }
 
 .logo {
   font-size: 1.4rem;
-  letter-spacing: 2px;
+  letter-spacing: 1.3px;
 }
 
 .logo-color{

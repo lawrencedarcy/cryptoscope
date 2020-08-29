@@ -1,14 +1,20 @@
 .console-outer {
   width: 100%;
-  max-width: 800px;
+  max-width: 2000px;
   height: 160px;
   animation: fadeIn ease 5s;
   -webkit-animation: fadeIn ease 5s;
+  margin: 0.1rem auto;
 }
+
+.console-outer-faded {
+ 
+}
+
 
 .console-switch {
   border: 0.5px solid white;
-  background-color: black;
+  background-color: #1d2928;
   padding: 0.5rem 0.4rem;
   color: rgba(255, 255, 255, 0.815);
   cursor: pointer;
@@ -24,9 +30,6 @@
   float: right;
 }
 
-.choose-model {
-  padding: 4rem;
-}
 
 .cyber-button:hover {
   animation: background-change 0.3s 0.3s forwards;
@@ -65,7 +68,7 @@
 }
 
 .select-label {
-  background-color: #8400ff10;
+  background-color: rgb(34, 34, 34);
   padding: 1rem;
 }
 .slider-label {

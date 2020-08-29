@@ -22,7 +22,7 @@ overflow: auto;
   
   display: flex;
   margin: auto;
-  padding: .6rem .8rem;
+  padding: .5rem .8rem;
   box-sizing: border-box;
   background-color: rgb(34, 34, 34);
   text-transform: uppercase;

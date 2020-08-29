@@ -1,59 +1,53 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './AIconsole.css';
 import Slider from 'react-slider-simple';
 
-
-
 function AIconsole(props) {
+  const [consoleSwitch, setConsoleSwitch] = useState(false);
+  const [percent, setPercent] = useState(50);
 
-const [consoleSwitch, setConsoleSwitch] = useState(false);
-const [percent, setPercent ]= useState(50);
-
-const sliderChange = (percent) => {
-  setPercent(percent);
-};
-const sliderDone = () => {};
+  const sliderChange = percent => {
+    setPercent(percent);
+  };
+  const sliderDone = () => {};
 
   return (
-    <div className={consoleSwitch && 'console-outer'}>
+    <div className={consoleSwitch ? 'console-outer' : 'console-outer-faded'}>
+      <button
+        className='console-switch cyber-button'
+        onClick={() => setConsoleSwitch(!consoleSwitch)}
+      >
+        {' '}
+        {consoleSwitch ? 'DISABLE AI' : 'ACTIVATE AI'}
+      </button>
 
-  <button className='console-switch cyber-button' onClick={() => setConsoleSwitch(!consoleSwitch)} > {consoleSwitch ? 'DISABLE AI' : 'ACTIVATE AI' }</button>
+      {consoleSwitch && (
+        <div className='choose-model'>
+          <div className='select-label'>
+            CHOOSE MODEL:
+            <select name='cars' id='cars' className='select'>
+              <option value='channel up'>Channel up</option>
+              <option value='channel down'>Channel down</option>
+              <option value='ascending triangle'>Ascending triangle</option>
+              <option value='Cup with handle'>Cup with handle</option>
+              <option value='falling wedge'>Falling wedge</option>
+            </select>
+            <div className='slider-label'>
+              <div className='slider-label-text'>MODEL CONFIDENCE LEVEL:</div>
 
-
-{consoleSwitch &&
-  <div className='choose-model'>
-    <div className='select-label'>
-    CHOOSE MODEL: 
-
-  <select name="cars" id="cars" className='select'>
- 
-  <option value="channel up">Channel up</option>
-  <option value="channel down">Channel down</option>
-  <option value="ascending triangle">Ascending triangle</option>
-  <option value="Cup with handle">Cup with handle</option>
-  <option value="falling wedge">Falling wedge</option>
-
-</select>
-
-<div className='slider-label'>
-<div className='slider-label-text'>MODEL CONFIDENCE LEVEL:</div>
-
-<Slider
-  value={percent}
-  onChange={sliderChange}
-  onDone={sliderDone}
-  thumbColor='#8400ffc2'
-  shadowColor='#8400ff65'
-  sliderPathColor='#8400ff1a'
-  className='slider'
-/>
-</div>
-  </div>
-  </div>
-
-  
-  
-  }
+              <Slider
+                value={percent}
+                onChange={sliderChange}
+                onDone={sliderDone}
+                thumbColor='#294946'
+                shadowColor='##1d2928'
+                sliderPathColor='#283837'
+                className='slider'
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

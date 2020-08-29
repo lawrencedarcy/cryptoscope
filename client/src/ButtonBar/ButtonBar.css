@@ -1,6 +1,6 @@
 .buttonbar-outer {
   width: 80%;
-  height: 2srem;
+  height: 3rem;
   display: flex;
   margin: 0rem auto 0 ;
   overflow: auto;
@@ -17,7 +17,7 @@
   width: 80%;
   display: flex;
   margin: 3rem auto .1rem ;
-  padding: .6rem .8rem;
+  padding: .5rem .8rem;
   box-sizing: border-box;
   background-color: rgb(34, 34, 34);
   text-transform: uppercase;
