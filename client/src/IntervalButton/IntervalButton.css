@@ -1,5 +1,5 @@
 .intervalbtn-outer {
-  padding: .3rem;
+  padding: 1rem;
   background-color: rgb(34, 34, 34);
   border-bottom: 3px solid transparent;
   color: rgba(255, 255, 255, 0.822);
@@ -8,13 +8,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
   justify-content: center;
   cursor: pointer;
   outline: none;
   border: none;
   font-family: 'Raleway', sans-serif;
-  min-width: 6rem;
+  min-width: 5rem;
   font-size: 1rem;
+  box-sizing: border-box;
 
 }
 .intervalbtn-outer:hover {

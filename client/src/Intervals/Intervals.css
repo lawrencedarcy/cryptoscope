@@ -1,11 +1,16 @@
 .intervals {
-  width: 100%;
-  height: 2.5rem;
-  display: flex;
+ 
+  height: 3rem;
   overflow: auto;
-  max-width: 1600px;
+ 
+ max-width: 2000px;
   margin-top: .1rem;
   margin-bottom: 0rem;
+display: flex;
+
+align-items: stretch;
+align-content: stretch;
+overflow: auto;
 }
 
 .intervals::-webkit-scrollbar {
