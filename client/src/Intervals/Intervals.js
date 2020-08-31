@@ -21,7 +21,7 @@ function Intervals({ interval, intervalChangeHandler }) {
 
   return (
     <div>
-          <div className='interval-subbar'>Set interval</div>
+          <div className='interval-subbar'>Time range</div>
 
     <div className='intervals'>
       {intervals.map(x => (
