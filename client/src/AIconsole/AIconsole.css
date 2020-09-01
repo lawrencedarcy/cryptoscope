@@ -8,13 +8,13 @@
 
 .console-outer-faded {
  opacity: 0.3;
+ pointer-events:none;
 }
 
 .console-header {
   width: 100%;
-  display: flex;
-  margin: 0rem auto 0.1rem;
-  padding: 0.5rem 0.8rem;
+  margin: .05rem auto 0.1rem;
+  padding: 0.5rem 0rem;
   box-sizing: border-box;
   background-color: rgb(34, 34, 34);
   text-transform: uppercase;
@@ -24,14 +24,15 @@
   max-width: 2000px;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.console-switch {
-  border: 0.5px solid white;
+  justify-content: space-between;
 
-  width: 150px;
-  float: right;
+  
 }
+
+.flex-align {
+width: 8rem;
+}
+
 
 .cyber-button:hover {
   animation: background-change 0.3s 0.3s forwards;

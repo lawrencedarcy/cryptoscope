@@ -21,7 +21,7 @@ overflow: auto;
 .interval-subbar{
   
   display: flex;
-  margin: auto;
+  margin: 0 auto .1rem 0;
   padding: .5rem .8rem;
   box-sizing: border-box;
   background-color: rgb(34, 34, 34);

@@ -11,6 +11,7 @@ function AIconsole(props) {
   };
 
   const sliderChange = percent => {
+    console.log(percent);
     setPercent(percent);
   };
   const sliderDone = () => {};
@@ -19,27 +20,29 @@ function AIconsole(props) {
     <div className={'console-outer'}>
       
         <div>
-          <div className='choose-model'>
-            <div className='console-header'>AI ASSISTANCE 
-            
+          <div>
+            <div className='console-header'>
+              <div className='flex-align'></div>
+             <span className='flex-align'>AI ASSISTANCE </span> 
+              <div className='flex-align'>
             <Switch
               onChange={handleChange}
               checked={consoleSwitch}
               onColor='#283837'
               onHandleColor='#294946'
-              handleDiameter={20}
+              handleDiameter={14}
               uncheckedIcon={false}
               checkedIcon={false}
               boxShadow='0px 1px 5px rgba(0, 0, 0, 0.6)'
               activeBoxShadow='0px 0px 1px 10px rgba(0, 0, 0, 0.2)'
-              height={10}
-              width={28}
+              height={8}
+              width={25}
               className='react-switch'
               id='material-switch'
              
             />
             </div>
-           
+            </div>
 
             <div className={consoleSwitch ? 'console-outer select-label' : 'console-outer-faded select-label'} >
               CHOOSE MODEL:

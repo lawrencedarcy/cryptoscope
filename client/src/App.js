@@ -10,7 +10,7 @@ import AIconsole from './AIconsole/AIconsole';
 
 function App() {
   const [symbolData, setSymbolData] = useState();
-  const [currentSymbol, setCurrentSymbol] = useState('BTCUSDT');
+  const [currentSymbol, setCurrentSymbol] = useState('ETHBTC');
   const [allSymbols, setAllSymbols] = useState([]);
   const [interval, setInterval] = useState('1h');
   const [options, setOptions] = useState({
