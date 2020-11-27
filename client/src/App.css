@@ -4,10 +4,12 @@
 
 }
 
-.chart-wrapper {
-width: 80%;
-  margin: 0em auto;
-  border: 0px solid white;
-  max-width: 2000px;
+.app-consoles {
+  display: flex;
+  width: 100%;
+  margin: 2rem 0;
+  align-items: center;
+  justify-content: center;
 }
+
 

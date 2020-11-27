@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from './NavBar/NavBar';
 import './App.css';
-import CandleChart from './CandleChart/CandleChart';
-import ButtonBar from './ButtonBar/ButtonBar';
-import Intervals from './Intervals/Intervals';
-import AIconsole from './AIconsole/AIconsole';
+import MainConsole from './MainConsole/MainConsole';
+import Watchlist from './Watchlist/Watchlist';
 
 
 function App() {
@@ -92,20 +90,19 @@ const getAllSymbolData = () => {
   return (
     <div className='App'>
       <NavBar />
-      <ButtonBar symbolChangeHandler={symbolChangeHandler} currentSymbol={currentSymbol} allSymbols={allSymbols}/>
-      <div className='chart-wrapper'>
-        {' '}
-        {symbolData && 
-                  <CandleChart symbolData={symbolData} options={options} candlestickSeries={candlestickSeries} />
-
-        }
+      <div className='app-consoles'>
+      <Watchlist />
+      <MainConsole  symbolChangeHandler={symbolChangeHandler}
+      currentSymbol={currentSymbol}
+      allSymbols={allSymbols}
+      symbolData={symbolData}
+      candlestickSeries={candlestickSeries}
+      intervalChangeHandler={intervalChangeHandler}
+      interval={interval}/>
       </div>
-      <div className='chart-wrapper'>
-      <Intervals intervalChangeHandler={intervalChangeHandler} interval={interval}/>
-      <AIconsole />
       </div>
     
-    </div>
+   
   );
 }
 
