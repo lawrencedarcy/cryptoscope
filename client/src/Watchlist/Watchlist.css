@@ -4,4 +4,5 @@
   height: 600px;
   background-color: aliceblue;
   margin: .5rem;
+  overflow: scroll;
 }

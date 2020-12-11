@@ -1,11 +1,30 @@
 import React from 'react';
 import './Watchlist.css';
+import WatchlistModule from './WatchlistModule';
 
-function Watchlist(props) {
+function Watchlist({ currentSymbol, allSymbols, symbolData }) {
   return (
-    <div className="watchlist-container">
-
-      
+    <div className='watchlist-container'>
+      <WatchlistModule
+        currentSymbol={currentSymbol}
+        allSymbols={allSymbols}
+        symbolData={symbolData}
+      />
+        <WatchlistModule
+        currentSymbol={currentSymbol}
+        allSymbols={allSymbols}
+        symbolData={symbolData}
+      />
+        <WatchlistModule
+        currentSymbol={currentSymbol}
+        allSymbols={allSymbols}
+        symbolData={symbolData}
+      />
+       <WatchlistModule
+        currentSymbol={currentSymbol}
+        allSymbols={allSymbols}
+        symbolData={symbolData}
+      />
     </div>
   );
 }
